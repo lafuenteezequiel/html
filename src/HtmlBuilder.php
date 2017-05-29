@@ -76,7 +76,7 @@ class HtmlBuilder
      */
     public function script($url, $attributes = [], $secure = null)
     {
-        $attributes['src'] = $this->url->asset($url, $secure);
+        $attributes['src'] = $this->url->asset($this->verifyEnvironment($url), $secure);
 
         return $this->toHtmlString('<script' . $this->attributes($attributes) . '></script>' . PHP_EOL);
     }
@@ -562,5 +562,16 @@ class HtmlBuilder
         }
 
         throw new BadMethodCallException("Method {$method} does not exist.");
+    }
+
+
+    public function verifyEnvironment($url){
+
+        if(env('APP_ENV') == 'local'){
+            $url =  $url . '?' . crc32(time());
+        }else{
+            $url =  $url . '?' . crc32(env('APP_ENV'));
+        }
+        return $url;
     }
 }
