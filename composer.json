@@ -2,15 +2,14 @@
   "name": "lafuenteezequiel/html",
   "description": "HTML and Form Builders for the Laravel Framework",
   "license": "MIT",
-  "homepage": "http://laravelcollective.com",
   "support": {
-    "issues": "https://github.com/LaravelCollective/html/issues",
-    "source": "https://github.com/LaravelCollective/html"
+    "issues": "https://github.com/lafuenteezequiel/html/issues",
+    "source": "https://github.com/lafuenteezequiel/html"
   },
   "authors": [
     {
-      "name": "Adam Engebretson",
-      "email": "adam@laravelcollective.com"
+      "name": "Ezequiel Lafuente",
+      "email": "ezequiellaf@gmail.com"
     },
     {
       "name": "Taylor Otwell",
